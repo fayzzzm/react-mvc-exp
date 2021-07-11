@@ -1,7 +1,12 @@
 import { AppView } from "./App.view";
-import './style.css';
+import "./style.css";
 
 export const App = () => {
-  return AppView();
-}
+  const credentials = {
+    data: {
+      stack: "React",
+    },
+  };
 
+  return AppView(credentials);
+};

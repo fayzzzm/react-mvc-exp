@@ -1,6 +1,14 @@
 import logo from "../../logo.svg";
 
-export const AppView = () => {
+interface IApp {
+  data: {
+    stack: string;
+  };
+}
+
+export const AppView = ({ data }: IApp) => {
+  const { stack } = data;
+
   return (
     <div className="App">
       <header className="App-header">
@@ -14,7 +22,7 @@ export const AppView = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Learn {stack}
         </a>
       </header>
     </div>
